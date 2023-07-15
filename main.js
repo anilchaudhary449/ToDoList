@@ -3,18 +3,18 @@ window.addEventListener('load',()=>{ // load hone k baad
     const input = document.querySelector('#newTaskInput');
     const list_el = document.querySelector('#tasks');
 
-    //////////////////// ADD TASK PRESS KARK K BAAD KYA HOGA ///////////////////////////////////////////////////
+    //////////////////// ADD TASK PRESS ///////////////////////////////////////////////////
     form.addEventListener('submit',(e)=>{
         e.preventDefault(); // prevent refresh page 
        const task = input.value; // GIVES VALUE INSIDE INPUT BOX STORE IN TASK
-       if(!task){ // agar kuch nhi likha to alert dega and return hojayega 
+       if(!task){ // if input is null then it will give an alert and will return back
            alert("Please fill out  a task ")
            return;
        }
 
     ///////////////////////////////////////////////////////////////////////////////////////////    
-    const task_el = document.createElement("div"); // new div ban jayega after adding task  agar task likha hoga 
-    task_el.classList.add("task"); // us div ki id hogi task jo ki same div add karegi 
+    const task_el = document.createElement("div"); // new div ban hunxa after adding task  yadi task likhko hunxa
+    task_el.classList.add("task"); // tyo div ko id hunxa task jun ki same div add garxa
     list_el.appendChild(task_el);
 
     ///////////////////////////////////////////////////////////////////////////////////////////
